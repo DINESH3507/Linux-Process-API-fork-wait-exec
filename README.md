@@ -22,6 +22,29 @@ Write the C Program using Linux Process API - fork(), wait(), exec()
 Test the C Program for the desired output. 
 
 # PROGRAM:
+```
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main(void)
+{       //variable to store calling function's process id
+        pid_t process_id;
+        //variable to store parent function's process id
+        pid_t p_process_id;
+        //getpid() - will return process id of calling function
+        process_id = getpid();
+        //getppid() - will return process id of parent function
+        p_process_id = getppid();
+        //printing the process ids
+        printf("The process id: %d\n",process_id);
+        printf("The process id of parent function: %d\n",p_process_id);
+        return 0; }
+```
+
+# OUTPUT:
+
+![Screenshot from 2025-04-26 19-06-34](https://github.com/user-attachments/assets/8e0d2dcf-c2d7-4364-9436-dd521d222b32)
+
 
 ## C Program to print process ID and parent Process ID using Linux API system calls
 
