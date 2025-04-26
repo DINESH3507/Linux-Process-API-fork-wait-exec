@@ -45,6 +45,29 @@ int main(void)
 
 ![Screenshot from 2025-04-26 19-06-34](https://github.com/user-attachments/assets/8e0d2dcf-c2d7-4364-9436-dd521d222b32)
 
+# PROGRAM:
+```
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{ int pid; 
+pid=fork(); 
+if(pid == 0) 
+{ printf("Iam child my pid is %d\n",getpid()); 
+printf("My parent pid is:%d\n",getppid()); 
+exit(0); } 
+else{ 
+printf("I am parent, my pid is %d\n",getpid()); 
+sleep(100); 
+exit(0);} 
+}
+```
+
+# OUTPUT:
+
+![Screenshot from 2025-04-26 19-20-17](https://github.com/user-attachments/assets/2bdf69bf-a63e-47d6-9b82-f1c5077bd193)
+
+
 
 ## C Program to print process ID and parent Process ID using Linux API system calls
 
