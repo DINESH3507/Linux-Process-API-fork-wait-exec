@@ -67,6 +67,25 @@ exit(0);}
 
 ![Screenshot from 2025-04-26 19-20-17](https://github.com/user-attachments/assets/2bdf69bf-a63e-47d6-9b82-f1c5077bd193)
 
+# PROGRAM:
+```
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Running ps with execlp\n");
+	execlp("ps", "ps", "ax", NULL);
+	printf("Done.\n");
+	exit(0);
+}
+
+```
+
+# OUTPUT:
+
+![Screenshot from 2025-04-26 19-28-21](https://github.com/user-attachments/assets/150b81fc-e098-4cc8-91ed-105ab7aebddb)
+
 
 
 ## C Program to print process ID and parent Process ID using Linux API system calls
